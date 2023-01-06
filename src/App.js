@@ -21,7 +21,6 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     display: block;
   }
-
   body {
     background: #F3F5FC;
     font-family: "Inter", sans-serif;
