@@ -6,9 +6,12 @@ import Button from "./Button";
 import Textarea from "./Textarea";
 
 const FormS = styled.form`
-  grid-row: 2;
-  grid-column: 1 / 3;
+  @media (min-width: 800px) {
+    grid-row: 2;
+    grid-column: 1 / 3;
+  }
   display: grid;
+  margin: 0 5rem;
   p {
     color: #495057;
     font-size: 0.875rem;

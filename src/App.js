@@ -30,11 +30,15 @@ const GlobalStyle = createGlobalStyle`
 
 const WrapperGrid = styled.section`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 1400px;
+  grid-template-columns: repeat(2, 1fr) 400px;
+  max-width: 1600px;
+  padding: 0 1rem;
   margin: 0 auto;
   margin-top: 1.5rem;
   gap: 3rem 2rem;
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  } ;
 `;
 
 function App() {

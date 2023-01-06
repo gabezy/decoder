@@ -3,7 +3,9 @@ import styled from "styled-components";
 import { ReactComponent as Logo } from "../Assets/logo.svg";
 
 const HeaderS = styled.header`
-  grid-column: 1/ 3;
+  @media (min-width: 800px) {
+    grid-column: 1/ 3;
+  }
 `;
 
 const Nav = styled.nav`
