@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "./Helper/MediaSize";
 
 const WrapperFooter = styled.footer`
   width: 100%;
   background: #0a3871;
-  position: absolute;
-  bottom: 0px;
+  @media ${device.desktop} {
+    position: absolute;
+    bottom: 0px;
+  }
 `;
 
 //https://cdn.jsdelivr.net/npm/simple-icons@8.2.0/icons/github.svg

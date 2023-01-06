@@ -6,7 +6,7 @@ const ButtonS = styled.button`
   padding-block: 1.3rem;
   font-size: 1rem;
   border-radius: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
   text-transform: capitalize;
   border: ${(props) => props.border};
   color: ${(props) => props.color};

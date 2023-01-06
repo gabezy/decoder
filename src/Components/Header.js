@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { ReactComponent as Logo } from "../Assets/logo.svg";
+import { device } from "./Helper/MediaSize";
+
+const HeaderS = styled.header`
+  @media ${device.desktop} {
+    grid-column: 1/ 3;
+  }
+`;
 
 const Nav = styled.nav`
-  max-width: 1200px;
-  margin: 0 auto;
   margin-top: 1rem;
   div {
     cursor: pointer;
@@ -14,13 +19,13 @@ const Nav = styled.nav`
 
 const Header = () => {
   return (
-    <header>
+    <HeaderS>
       <Nav>
         <div onClick={() => window.location.reload()}>
           <Logo />
         </div>
       </Nav>
-    </header>
+    </HeaderS>
   );
 };
 
