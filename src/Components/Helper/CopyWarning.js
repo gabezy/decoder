@@ -10,7 +10,7 @@ const effect = keyframes`
 
 const Wrapper = styled.div`
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -29,7 +29,6 @@ const Wrapper = styled.div`
   line-height: 1.5;
   padding: 0 0.5rem;
   border: 2px solid #0a3871;
-  /* box-shadow: 0 0 0 3px #0a3871; */
   * {
     font-size: inherit;
   }

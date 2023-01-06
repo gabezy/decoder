@@ -3,6 +3,7 @@ import CopyToClipboard from "react-copy-to-clipboard";
 import styled from "styled-components";
 import Button from "../Form/Button";
 import CopyWarning from "../Helper/CopyWarning";
+import { device } from "../Helper/MediaSize";
 
 const Wrapper = styled.ul`
   display: grid;
@@ -15,13 +16,17 @@ const Wrapper = styled.ul`
 
 const Text = styled.li`
   color: #495057;
-  line-height: 1.3;
+  line-height: 1.4;
   text-align: left;
   font-size: 1.3rem;
   word-break: break-word;
   margin-top: 1rem;
   padding-top: 1rem;
   height: 80%;
+  @media ${device.table} {
+    min-height: 20vh;
+    margin-bottom: 2rem;
+  }
 `;
 
 const DisplayText = ({ text }) => {

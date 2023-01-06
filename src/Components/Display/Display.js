@@ -3,9 +3,10 @@ import { AppContext } from "../../AppContext";
 import styled from "styled-components";
 import DisplayNoText from "./DisplayNoText";
 import DisplayText from "./DisplayText";
+import { device } from "../Helper/MediaSize";
 
 const Wrapper = styled.div`
-  @media (min-width: 800px) {
+  @media ${device.desktop} {
     grid-row: 1/3;
   }
   display: grid;

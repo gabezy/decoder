@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { ReactComponent as Logo } from "../Assets/logo.svg";
+import { device } from "./Helper/MediaSize";
 
 const HeaderS = styled.header`
-  @media (min-width: 800px) {
+  @media ${device.desktop} {
     grid-column: 1/ 3;
   }
 `;

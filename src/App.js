@@ -5,6 +5,7 @@ import Display from "./Components/Display/Display";
 import Footer from "./Components/Footer";
 import Form from "./Components/Form/Form";
 import Header from "./Components/Header";
+import { device } from "./Components/Helper/MediaSize";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -34,9 +35,10 @@ const WrapperGrid = styled.section`
   max-width: 1600px;
   padding: 0 1rem;
   margin: 0 auto;
+  margin-bottom: 3rem;
   margin-top: 1.5rem;
   gap: 3rem 2rem;
-  @media (max-width: 800px) {
+  @media ${device.table} {
     grid-template-columns: 1fr;
   } ;
 `;

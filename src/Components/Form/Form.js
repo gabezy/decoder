@@ -2,16 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { AppContext } from "../../AppContext";
 import Error from "../Helper/Error";
+import { device } from "../Helper/MediaSize";
 import Button from "./Button";
 import Textarea from "./Textarea";
 
 const FormS = styled.form`
-  @media (min-width: 800px) {
+  @media ${device.desktop} {
     grid-row: 2;
     grid-column: 1 / 3;
+    margin: 0 5rem;
   }
   display: grid;
-  margin: 0 5rem;
   p {
     color: #495057;
     font-size: 0.875rem;
@@ -25,6 +26,9 @@ const Fieldset = styled.fieldset`
   display: flex;
   justify-content: center;
   gap: 1rem;
+  @media ${device.mobile} {
+    flex-direction: column;
+  } ;
 `;
 
 const Form = () => {
@@ -56,7 +60,7 @@ const Form = () => {
         id="text"
         name="text"
         value={text}
-        placeholder="Digite um Texto..."
+        placeholder="Digite um Texto"
         onChange={({ target }) => setText(target.value)}
       />
       <p>🛈 Apenas letras minúsculas e sem acento.</p>
