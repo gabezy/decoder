@@ -23,14 +23,18 @@ const Text = styled.li`
 
 const DisplayText = ({ text }) => {
   const [textCopied, setTextCopied] = React.useState(false);
+  let timeoutId;
+
+  const timeoutWarning = () => {
+    timeoutId = setTimeout(() => {
+      setTextCopied(false);
+    }, 1500);
+  };
 
   const handleClick = () => {
-    setTextCopied(false);
+    clearInterval(timeoutId);
     setTextCopied(true);
-    const interval = setInterval(() => {
-      setTextCopied(false);
-    }, 2 * 1000);
-    return clearInterval(interval);
+    timeoutWarning();
   };
 
   return (

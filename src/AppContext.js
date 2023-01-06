@@ -42,6 +42,7 @@ export const AppStorage = ({ children }) => {
         text = text.replaceAll(code[k], k);
       }
     }
+    setError(false);
     return text;
   };
 

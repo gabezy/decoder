@@ -31,7 +31,7 @@ const Form = () => {
     const encryptText = encrypt(text);
     if (encrypt) {
       setTextToCode(encryptText);
-      setText(" ");
+      setText("");
       document.querySelector("textarea").focus();
     }
   };
@@ -40,7 +40,7 @@ const Form = () => {
     const decryptText = decrypt(text);
     if (decryptText) {
       setTextToCode(decrypt);
-      setText(" ");
+      setText("");
       document.querySelector("textarea").focus();
     }
   };
