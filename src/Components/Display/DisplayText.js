@@ -14,6 +14,9 @@ const Wrapper = styled.ul`
 `;
 
 const Text = styled.li`
+  color: #495057;
+  line-height: 1.3;
+  text-align: left;
   font-size: 1.3rem;
   word-break: break-word;
   margin-top: 1rem;

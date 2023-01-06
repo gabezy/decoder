@@ -6,6 +6,8 @@ import Button from "./Button";
 import Textarea from "./Textarea";
 
 const FormS = styled.form`
+  grid-row: 2;
+  grid-column: 1 / 3;
   display: grid;
   p {
     color: #495057;

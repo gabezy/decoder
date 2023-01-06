@@ -4,8 +4,9 @@ import styled from "styled-components";
 import DisplayNoText from "./DisplayNoText";
 import DisplayText from "./DisplayText";
 
-const WrapperMain = styled.div`
+const Wrapper = styled.div`
   display: grid;
+  grid-row: 1/3;
   background: #fff;
   border-radius: 1rem;
   img {
@@ -16,9 +17,9 @@ const Display = () => {
   const { textToCode } = React.useContext(AppContext);
 
   return (
-    <WrapperMain>
+    <Wrapper>
       {textToCode ? <DisplayText text={textToCode} /> : <DisplayNoText />}
-    </WrapperMain>
+    </Wrapper>
   );
 };
 

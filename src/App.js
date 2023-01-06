@@ -1,9 +1,10 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { AppStorage } from "./AppContext";
+import Display from "./Components/Display/Display";
 import Footer from "./Components/Footer";
+import Form from "./Components/Form/Form";
 import Header from "./Components/Header";
-import Home from "./Components/Home";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -27,13 +28,25 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const WrapperGrid = styled.section`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  gap: 3rem 2rem;
+`;
+
 function App() {
   return (
     <>
       <AppStorage>
         <GlobalStyle />
-        <Header />
-        <Home />
+        <WrapperGrid>
+          <Header />
+          <Form />
+          <Display />
+        </WrapperGrid>
         <Footer />
       </AppStorage>
     </>
