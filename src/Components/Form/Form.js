@@ -5,6 +5,7 @@ import Error from "../Helper/Error";
 import { device } from "../Helper/MediaSize";
 import Button from "./Button";
 import Textarea from "./Textarea";
+import Info from "../../Assets/info.svg";
 
 const FormS = styled.form`
   @media ${device.desktop} {
@@ -19,6 +20,11 @@ const FormS = styled.form`
     line-height: 1.5;
     margin-bottom: 0.7rem;
     padding-left: 5px;
+    display: flex;
+    gap: 5px;
+    img {
+      max-width: 16px;
+    }
   }
 `;
 const Fieldset = styled.fieldset`
@@ -63,7 +69,10 @@ const Form = () => {
         placeholder="Digite um Texto"
         onChange={({ target }) => setText(target.value)}
       />
-      <p>🛈 Apenas letras minúsculas e sem acento.</p>
+      <p>
+        <img src={Info} alt="info" />
+        Apenas letras minúsculas e sem acento.
+      </p>
       {error && <Error error={error} />}
       <Fieldset>
         <Button

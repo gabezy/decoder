@@ -8,6 +8,8 @@ import Header from "./Components/Header";
 import { device } from "./Components/Helper/MediaSize";
 
 const GlobalStyle = createGlobalStyle`
+
+
   * {
     margin: 0;
     padding: 0;
@@ -24,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
     display: block;
   }
   body {
-    background: #F3F5FC;
+    background: #e9ecf8;
     font-family: "Inter", sans-serif;
   }
 `;

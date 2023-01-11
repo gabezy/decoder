@@ -12,6 +12,7 @@ const TextArea = styled.textarea`
   color: #0a3871;
   padding: 1rem 2rem;
   margin-top: 0.5rem;
+  font-family: "Inter", sans-serif;
   :focus {
     outline: none;
   }

@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   align-items: center;
   margin: 0 auto;
   border-radius: 1rem;
-  background: #e9ecf8;
+  background: #f7f5fc;
   z-index: 1000;
   opacity: 0;
   animation: ${effect} 0.5s forwards;
