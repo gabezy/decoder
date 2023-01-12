@@ -21,7 +21,7 @@ const TextArea = styled.textarea`
   }
 `;
 
-const Textarea = ({ value, id, name, ...props }) => {
+const Textarea = ({ value, id, name, ref, ...props }) => {
   return <TextArea id={id} name={name} value={value} {...props}></TextArea>;
 };
 

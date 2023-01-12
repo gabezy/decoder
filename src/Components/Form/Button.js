@@ -11,7 +11,13 @@ const ButtonS = styled.button`
   border: ${(props) => props.border};
   color: ${(props) => props.color};
   background: ${(props) => props.bg};
+  transition: background 0.5s;
   cursor: pointer;
+  :disabled {
+    background: #7f8c8d;
+    color: #000;
+    border: none;
+  }
 `;
 
 const Button = ({ children, border, color, bg, ...props }) => {

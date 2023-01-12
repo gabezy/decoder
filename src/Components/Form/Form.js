@@ -45,6 +45,7 @@ const Form = () => {
   const handleEncryption = () => {
     const encryptText = encrypt(text);
     if (encrypt) {
+      document.getElementById("text").setAttribute("placeholder", "");
       setTextToCode(encryptText);
       setText("");
       document.querySelector("textarea").focus();
@@ -54,6 +55,7 @@ const Form = () => {
   const handleDecryption = () => {
     const decryptText = decrypt(text);
     if (decryptText) {
+      document.getElementById("text").setAttribute("placeholder", "");
       setTextToCode(decrypt);
       setText("");
       document.querySelector("textarea").focus();
@@ -75,22 +77,47 @@ const Form = () => {
       </p>
       {error && <Error error={error} />}
       <Fieldset>
-        <Button
-          bg="#0A3871"
-          color="#fff"
-          border="none"
-          onClick={handleEncryption}
-        >
-          Criptografar
-        </Button>
-        <Button
-          bg="transparent"
-          color="#0A3871"
-          border="1px solid #0A3871"
-          onClick={handleDecryption}
-        >
-          Descriptografar
-        </Button>
+        {text ? (
+          <Button
+            bg="#0A3871"
+            color="#fff"
+            border="none"
+            onClick={handleEncryption}
+          >
+            Criptografar
+          </Button>
+        ) : (
+          <Button
+            bg="#0A3871"
+            color="#fff"
+            border="none"
+            onClick={handleEncryption}
+            disabled
+          >
+            Criptografar
+          </Button>
+        )}
+
+        {text ? (
+          <Button
+            bg="transparent"
+            color="#0A3871"
+            border="1px solid #0A3871"
+            onClick={handleDecryption}
+          >
+            Descriptografar
+          </Button>
+        ) : (
+          <Button
+            bg="transparent"
+            color="#0A3871"
+            border="1px solid #0A3871"
+            onClick={handleDecryption}
+            disabled
+          >
+            Descriptografar
+          </Button>
+        )}
       </Fieldset>
     </FormS>
   );
