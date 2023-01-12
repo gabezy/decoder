@@ -4,6 +4,8 @@
 
 <br>
 
+<img src="./src/Assets/Decoder _ Alura.gif" alt="prjeto rondando .gif" style="margin: 0 auto; width: 540px"  />
+
 This project was made during the "ONE - Oracle Next Education" program, a partnership between Alura and Oracle.
 
 The challenge's goal is to construct a web application that can encrypt and decrypt a given text based on the encryption "keys", which are:
@@ -27,4 +29,4 @@ The challenge's goal is to construct a web application that can encrypt and decr
 <br>
 <br>
 
-Do not forget to check out the [JavaScript Version](https://github.com/gabezy/decodificador-challenge-1)
+Do not forget to check out the [TypeScript Version](https://github.com/gabezy/decodificador-challenge-1)
